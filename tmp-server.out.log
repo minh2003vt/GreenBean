@@ -1,0 +1,8 @@
+
+> greenbean-backend@0.1.0 dev
+> tsx watch src/server.ts
+
+GreenBean API is running on http://localhost:4000
+[0mPOST /api/users/login [31m500[0m 5052.076 ms - 35[0m
+4:50:48 PM [tsx] change in ./src\middleware\error-handler.ts Restarting...
+cGreenBean API is running on http://localhost:4000

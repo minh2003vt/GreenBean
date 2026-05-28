@@ -1,0 +1,31 @@
+
+> greenbean-backend@0.1.0 dev
+> tsx watch src/server.ts
+
+GreenBean API is running on http://localhost:4000
+[0mPOST /api/users/login [32m200[0m 869.990 ms - 557[0m
+[0mGET /api/challenges [31m500[0m 2.334 ms - 35[0m
+[0mGET /api/products/submissions [31m500[0m 1.706 ms - 35[0m
+[0mGET /api/users/me [32m200[0m 9213.448 ms - 289[0m
+[0mGET /api/problems [32m200[0m 1072.942 ms - 656[0m
+[0mGET /api/problems [36m304[0m 550.775 ms - -[0m
+[0mGET /api/products [31m500[0m 0.920 ms - 35[0m
+[0mGET /api/products [31m500[0m 1.754 ms - 35[0m
+[0mGET /api/orders [31m500[0m 1.853 ms - 35[0m
+[0mGET /api/orders [31m500[0m 2.205 ms - 35[0m
+[0mGET /api/cart [32m200[0m 4728.793 ms - 2[0m
+[0mGET /api/cart [36m304[0m 680.100 ms - -[0m
+[0mGET /api/problems/vang-la-ca-phe [36m304[0m 10895.395 ms - -[0m
+[0mGET /api/user-challenges [31m500[0m 5026.976 ms - 35[0m
+[0mPOST /api/users/logout [32m200[0m 0.227 ms - 24[0m
+[0mGET /api/problems/vang-la-ca-phe [36m304[0m 1077.482 ms - -[0m
+[0mGET /api/challenges/current [36m304[0m 5388.020 ms - -[0m
+[0mGET /api/user-challenges [32m200[0m 533.831 ms - 2[0m
+[0mGET /api/challenges/current [36m304[0m 262.741 ms - -[0m
+[0mGET /api/user-challenges [36m304[0m 271.809 ms - -[0m
+[0mGET /api/user-challenges [36m304[0m 283.935 ms - -[0m
+6:14:28 PM [tsx] change in ./src\middleware\validate.ts Restarting...
+cGreenBean API is running on http://localhost:4000
+[0mPOST /api/users/login [32m200[0m 4029.581 ms - 554[0m
+[0mGET /api/problems [36m304[0m 1098.815 ms - -[0m
+[0mGET /api/problems [36m304[0m 891.721 ms - -[0m

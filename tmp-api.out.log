@@ -1,0 +1,18 @@
+
+> greenbean-backend@0.1.0 dev
+> tsx watch src/server.ts
+
+GreenBean API is running on http://localhost:4000
+[0mPOST /api/users/login [32m200[0m 2885.579 ms - 557[0m
+[0mGET /api/orders [31m500[0m 3.984 ms - 35[0m
+[0mGET /api/challenges [31m500[0m 1.043 ms - 35[0m
+5:55:25 PM [tsx] change in ./src\routes\problems.routes.ts Restarting...
+cGreenBean API is running on http://localhost:4000
+5:55:43 PM [tsx] change in ./src\routes\orders.routes.ts Restarting...
+cGreenBean API is running on http://localhost:4000
+5:56:24 PM [tsx] change in ./src\routes\challenges.routes.ts Restarting...
+cGreenBean API is running on http://localhost:4000
+5:56:40 PM [tsx] change in ./src\routes\challenges.routes.ts Restarting...
+cGreenBean API is running on http://localhost:4000
+5:56:54 PM [tsx] change in ./src\docs\openapi.ts Restarting...
+cGreenBean API is running on http://localhost:4000

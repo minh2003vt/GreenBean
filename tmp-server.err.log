@@ -1,0 +1,20 @@
+PrismaClientInitializationError: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\GreenBean\backend\src\routes\users.routes.ts:98:36
+
+  95 validate(loginSchema),
+  96 asyncHandler(async (req, res) => {
+  97   const body = req.body as z.infer<typeof loginSchema>;
+→ 98   const user = await prisma.user.findUnique(
+Can't reach database server at `zephyr.proxy.rlwy.net:41375`
+
+Please make sure your database server is running at `zephyr.proxy.rlwy.net:41375`.
+    at ei.handleRequestError (D:\GreenBean\backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:242:13)
+    at ei.handleAndLogRequestError (D:\GreenBean\backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\GreenBean\backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\GreenBean\backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\GreenBean\backend\src\routes\users.routes.ts:98:18) {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}

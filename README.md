@@ -1,34 +1,55 @@
-# GreenBean
+# GreenBean Backend
 
-Monorepo structure:
+Node.js + Express + Prisma backend based on the provided database diagram.
+The backend uses PostgreSQL.
 
-- `frontend/` - Vite React app
-- `backend/` - Express + Prisma API
+## Setup
 
-## Local Development
-
-Frontend:
-
-```powershell
-cd frontend
-npm.cmd install
-npm.cmd run dev
-```
-
-Backend:
-
-```powershell
+```bash
 cd backend
-npm.cmd install
+npm install
+copy .env.example .env
+npm run prisma:migrate
+npm run seed
+npm run dev
+```
+
+On Windows PowerShell, use `npm.cmd` if `npm` is blocked by execution policy:
+
+```powershell
+npm.cmd run prisma:migrate
+npm.cmd run seed
 npm.cmd run dev
 ```
 
-## Railway
+API runs at `http://localhost:4000` by default.
 
-Create separate Railway services from the same repo:
+## Main Routes
 
-- Frontend service root directory: `frontend`
-- Backend service root directory: `backend`
-- Database service: PostgreSQL
+- `GET /health`
+- `GET /docs`
+- `GET /openapi.json`
+- `POST /api/users/register`
+- `POST /api/users/login`
+- `POST /api/users/logout`
+- `GET/PATCH /api/users/me`
+- `POST /api/users/forgot-password`
+- `POST /api/users/reset-password`
+- `PATCH /api/users/password`
+- `GET /api/problems`
+- `GET /api/problems/:slug`
+- `POST/PATCH/DELETE /api/problems` admin only
+- `GET /api/products`
+- `POST /api/products`
+- `PATCH /api/products/:id/approval`
+- `GET/POST/PATCH/DELETE /api/cart`
+- `GET /api/orders`
+- `POST /api/orders`
+- `GET /api/challenges`
+- `POST/PATCH/DELETE /api/challenges` admin only
+- `GET /api/challenges/:id/participants` admin only
+- `POST /api/user-challenges`
+- `PATCH /api/user-challenges/:id`
+- `POST /api/uploads`
 
-Each app folder has its own `railway.toml`.
+Seed users use password `GreenBean@123`.
