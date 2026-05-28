@@ -5,7 +5,7 @@ export const openApiSpec = {
     version: "0.1.0",
     description: "Backend API for GreenBean auth, problems, market, orders, challenges, uploads.",
   },
-  servers: [{ url: "http://localhost:4000", description: "Local" }],
+  servers: [{ url: "/", description: "Current host" }],
   tags: [
     { name: "Health" },
     { name: "Auth" },
