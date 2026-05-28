@@ -1,0 +1,83 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100dvh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Full-height page column — children use gap that scales with viewport */
+.page-stack {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-stack-lg);
+  min-height: 100%;
+}
+
+.page-stack__grow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-lg);
+  min-height: 0;
+}
+
+.page-stack__footer {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Home: on tall screens, push Contact Us up; short screens scroll to see it */
+.page-stack--fill {
+  min-height: 100%;
+}
+
+.page-stack--fill .page-stack__grow {
+  flex: 1;
+  min-height: 0;
+}
+
+.page-stack--fill .page-stack__footer {
+  margin-top: auto;
+  padding-top: var(--space-stack);
+}

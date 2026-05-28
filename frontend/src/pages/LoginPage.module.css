@@ -1,0 +1,168 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f6f8f3;
+}
+
+.panel {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border: 1px solid #dfe7d7;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(24, 45, 33, 0.12);
+}
+
+.title {
+  margin: 0;
+  color: #103f34;
+  font-size: 28px;
+}
+
+.subtitle {
+  margin: 8px 0 24px;
+  color: #5f6f66;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab,
+.tabActive {
+  min-height: 40px;
+  border: 1px solid #cdd8c7;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0d4a3f;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tabActive {
+  background: #0d4a3f;
+  color: #ffffff;
+  border-color: #0d4a3f;
+}
+
+.label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  color: #193d34;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #cdd8c7;
+  border-radius: 6px;
+  padding: 0 12px;
+  font: inherit;
+}
+
+.passwordField {
+  position: relative;
+  display: block;
+}
+
+.passwordField .input {
+  padding-right: 44px;
+}
+
+.passwordToggle {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #0d4a3f;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.passwordToggle:hover {
+  background: #edf4e9;
+}
+
+.button {
+  height: 46px;
+  border: 0;
+  border-radius: 6px;
+  background: #0d4a3f;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+  font-weight: 700;
+}
+
+.notice {
+  margin: 0;
+  color: #0d4a3f;
+  font-weight: 700;
+}
+
+.linkButton {
+  border: 0;
+  background: transparent;
+  color: #0d4a3f;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.resetBox {
+  display: grid;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #e3eadf;
+}
+
+.passwordRules {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid #e3eadf;
+  border-radius: 6px;
+  background: #f8fbf6;
+}
+
+.rule,
+.ruleOk {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rule {
+  color: #7a837d;
+}
+
+.ruleOk {
+  color: #0d4a3f;
+}

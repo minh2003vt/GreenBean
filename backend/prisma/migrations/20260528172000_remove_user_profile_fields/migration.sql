@@ -1,0 +1,4 @@
+ALTER TABLE "users"
+  DROP COLUMN IF EXISTS "region",
+  DROP COLUMN IF EXISTS "main_crop",
+  DROP COLUMN IF EXISTS "language";

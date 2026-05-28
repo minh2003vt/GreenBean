@@ -1,0 +1,417 @@
+.page {
+  padding-top: clamp(0.25rem, 1dvh, 0.5rem);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.topBar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titleRow {
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  text-align: center;
+}
+
+.cartBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+.cartBtn:hover {
+  background: var(--color-accent-soft);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.2rem;
+  border-radius: var(--radius-full);
+  background: #e11d48;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sellBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.sellBtn:hover {
+  background: var(--color-accent-soft);
+}
+
+.searchWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-stack) var(--space-inline);
+}
+
+
+
+/* AFTER */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  height: 100%;           /* ← fills implicit grid row height */
+}
+
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;                /* ← grows so addBtn always sits at bottom */
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-bg);   /* ← grey placeholder for broken images */
+  display: block;                /* ← removes inline bottom gap */
+  flex-shrink: 0;
+}
+
+.thumbPlaceholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;               /* ← pushes price to fill space, aligns addBtn */
+  gap: 0.25rem;
+  padding: 0.6rem 0.6rem 0.7rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-stack) var(--space-inline);
+  align-items: start;    /* ← each card only as tall as its content */
+}
+
+.name {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.seller {
+  margin: 0;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.price {
+  margin: 0.1rem 0 0;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.empty {
+  margin: 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.25rem 0.5rem 0.6rem;
+  padding: 0.4rem 0.6rem;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  filter: brightness(0.96);
+}
+
+.addBtn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.detailImage {
+  width: 100%;
+  max-height: 14rem;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.detailMeta {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.detailPrice {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.detailDesc {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.detailActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+
+.addBtnDetail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.7rem;
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+.addBtnDetail:disabled {
+  opacity: 0.5;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.cartThumb {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.cartThumbPlaceholder {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.cartMeta {
+  min-width: 0;
+}
+
+.cartName {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.cartSub {
+  margin: 0.1rem 0 0;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.cartControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.iconBtn {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.iconBtn:disabled {
+  opacity: 0.45;
+}
+
+.removeBtn {
+  color: #b42323;
+}
+
+.qty {
+  min-width: 1rem;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.cartLineTotal {
+  margin: 0.15rem 0 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.paymentSection {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.paymentTitle {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+}
+
+.orderSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+}
+
+.orderSummary strong {
+  font-size: var(--font-size-md);
+  color: var(--color-primary);
+}
+
+.paymentNote {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.paypalBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  color: #1a1a1a;
+  background: #ffc439;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.paypalBtn:not(:disabled) {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.paypalWrap {
+  min-height: 2.75rem;
+}

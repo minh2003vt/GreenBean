@@ -1,0 +1,33 @@
+.header {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0 0.75rem;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-text);
+  border-radius: var(--radius-full);
+}
+
+.back:hover {
+  background: var(--color-accent-soft);
+}
+
+.titleRow {
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  text-align: center;
+  color: var(--color-text);
+}
