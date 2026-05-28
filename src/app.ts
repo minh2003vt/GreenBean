@@ -11,7 +11,10 @@ import { apiRouter } from "./routes/index.js";
 
 export const app = express();
 
-const allowedOrigins = env.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean);
+const allowedOrigins = [
+  ...env.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean),
+  env.RAILWAY_PUBLIC_DOMAIN ? `https://${env.RAILWAY_PUBLIC_DOMAIN}` : undefined,
+].filter((origin): origin is string => Boolean(origin));
 
 app.use(helmet());
 app.use(cors({

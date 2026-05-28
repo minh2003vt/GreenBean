@@ -15,6 +15,7 @@ const envSchema = z.object({
   JWT_ISSUER: z.string().default("GreenBean"),
   JWT_AUDIENCE: z.string().default("GreenBeanUser"),
   COOKIE_SECURE: z.coerce.boolean().default(false),
+  RAILWAY_PUBLIC_DOMAIN: z.string().optional(),
   BREVO_API_KEY: z.string().optional(),
   MAIL_SENDER_EMAIL: z.string().email().optional(),
   MAIL_SENDER_NAME: z.string().default("GreenBean"),
